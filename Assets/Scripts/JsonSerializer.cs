@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Events;
 using System.IO;
 
 public class JsonSerializer : MonoBehaviour
@@ -9,6 +10,8 @@ public class JsonSerializer : MonoBehaviour
     public static JsonSerializer Instance;
     public Data data = new Data();
     public string fileName = "OxygenTankAR.json";
+
+    public UnityEvent onDataLoaded;
 
     private void Awake()
     {
@@ -47,13 +50,13 @@ public class JsonSerializer : MonoBehaviour
     private IEnumerator Initialize()
     {
         yield return StartCoroutine(GetTextData(fileName));
-        yield return StartCoroutine(LoadARScene());
+        yield return StartCoroutine(OnDataLoadedCoroutine());
     }
 
-    private IEnumerator LoadARScene()
+    private IEnumerator OnDataLoadedCoroutine()
     {
         yield return new WaitForEndOfFrame();
-        SceneLoader.LoadScene(Config.AR_SCENE);
+        onDataLoaded?.Invoke();
     }
 
     private IEnumerator GetTextData(string file)

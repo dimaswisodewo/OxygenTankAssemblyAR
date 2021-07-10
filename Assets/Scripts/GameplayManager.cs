@@ -82,11 +82,6 @@ public class GameplayManager : MonoBehaviour
         UIManager.Instance.ToggleDescriptionPanel();
     }
 
-    public void OnQuitButtonClick()
-    {
-        Application.Quit();
-    }
-
     public void OnNextDescButtonClick()
     {
         int dataCount = (selectedARObject.actionType == ACTION_TYPE.ASSEMBLY ? JsonSerializer.Instance.GetAssembleDataCount() : JsonSerializer.Instance.GetDiassembleDataCount());
