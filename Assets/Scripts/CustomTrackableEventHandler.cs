@@ -149,6 +149,9 @@ public class CustomTrackableEventHandler : MonoBehaviour
         if (mTrackableBehaviour)
         {
             GameplayManager.Instance.selectedARObject = arObject;
+            GameplayManager.Instance.activeMarkerCount += 1;
+
+            UIManager.Instance.SetActiveInstructionCanvas(false);
 
             var rendererComponents = mTrackableBehaviour.GetComponentsInChildren<Renderer>(true);
             var colliderComponents = mTrackableBehaviour.GetComponentsInChildren<Collider>(true);
@@ -167,6 +170,8 @@ public class CustomTrackableEventHandler : MonoBehaviour
                 component.enabled = true;
         }
 
+        arObject.ResetObject();
+
         if (OnTargetFound != null)
             OnTargetFound.Invoke();
     }
@@ -175,6 +180,13 @@ public class CustomTrackableEventHandler : MonoBehaviour
     {
         if (mTrackableBehaviour)
         {
+            GameplayManager.Instance.activeMarkerCount -= 1;
+
+            if (GameplayManager.Instance.activeMarkerCount <= 0)
+            {
+                UIManager.Instance.SetActiveInstructionCanvas(true);
+            }
+
             var rendererComponents = mTrackableBehaviour.GetComponentsInChildren<Renderer>(true);
             var colliderComponents = mTrackableBehaviour.GetComponentsInChildren<Collider>(true);
             var canvasComponents = mTrackableBehaviour.GetComponentsInChildren<Canvas>(true);
