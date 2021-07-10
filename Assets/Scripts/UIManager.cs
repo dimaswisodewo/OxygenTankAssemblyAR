@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
 
     [SerializeField] private GameObject _uiCanvas;
+    [SerializeField] private GameObject _instructionCanvas;
     [SerializeField] private RectTransform _descriptionPanel;
     [SerializeField] private Text _descriptionText;
     [SerializeField] private Text _titleText;
@@ -38,6 +39,11 @@ public class UIManager : MonoBehaviour
     public void SetActiveCanvasUI(bool setActive)
     {
         _uiCanvas.SetActive(setActive);
+    }
+
+    public void SetActiveInstructionCanvas(bool setActive)
+    {
+        _instructionCanvas.SetActive(setActive);
     }
 
     public void SetDescriptionText(string newText)

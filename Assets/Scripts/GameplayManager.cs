@@ -7,6 +7,8 @@ public class GameplayManager : MonoBehaviour
 {
     public static GameplayManager Instance;
 
+    public int activeMarkerCount = 0;
+
     [HideInInspector]
     public ARObject selectedARObject;
 
