@@ -167,6 +167,8 @@ public class CustomTrackableEventHandler : MonoBehaviour
                 component.enabled = true;
         }
 
+        arObject.ResetObject();
+
         if (OnTargetFound != null)
             OnTargetFound.Invoke();
     }

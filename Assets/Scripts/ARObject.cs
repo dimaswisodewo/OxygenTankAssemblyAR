@@ -31,4 +31,10 @@ public class ARObject : MonoBehaviour
     {
         animator.speed = 1f;
     }
+
+    public void ResetObject()
+    {
+        transform.localEulerAngles = Vector3.zero;
+        transform.localScale = Vector3.one;
+    }
 }
