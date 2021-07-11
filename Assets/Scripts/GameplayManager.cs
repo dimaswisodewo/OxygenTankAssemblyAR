@@ -46,8 +46,9 @@ public class GameplayManager : MonoBehaviour
         Initialize();
         selectedARObject.gameObject.SetActive(true);
 
-        UIManager.Instance.InitializeUI(selectedARObject.actionType);
-        UIManager.Instance.SetActiveCanvasUI(true); UIManager.Instance.SetDescriptionText(JsonSerializer.Instance.GetDescriptionData(selectedARObject.actionType, 0));
+        UIManager.Instance.InitializeUI();
+        UIManager.Instance.SetActiveCanvasUI(true);
+        UIManager.Instance.SetDescriptionText(JsonSerializer.Instance.GetDescriptionData(selectedARObject.actionType, 0));
 
         _currentDescIndex = 0;
     }

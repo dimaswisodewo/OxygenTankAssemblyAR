@@ -22,7 +22,7 @@ public class ScaleObject : MonoBehaviour
     {
         float newScale = _initialScale.x * factor;
         newScale = Mathf.Clamp(newScale, Config.MIN_SCALE, Config.MAX_SCALE);
-
+        newScale = Mathf.Lerp(transform.localScale.x, newScale, Time.deltaTime);
         transform.localScale = new Vector3(newScale, newScale, newScale);
     }
 }

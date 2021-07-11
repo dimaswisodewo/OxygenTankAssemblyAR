@@ -8,8 +8,10 @@ public static class Config
 
     public const string RESUME_TEXT = "Resume";
     public const string PAUSE_TEXT = "Pause";
-    public const string ASSEMBLY_TEXT = "Pemasangan";
-    public const string DIASSEMBLY_TEXT = "Pelepasan";
+    public const string ASSEMBLY_TEXT = "Installation";
+    public const string DIASSEMBLY_TEXT = "Removal";
+    public const string SAFETY_TEXT = "Safety Precaution";
+    public const string OXYGEN_TEXT = "Oxygen";
 
     public const string AR_SCENE = "ARScene";
 

@@ -30,12 +30,21 @@ public class UIManager : MonoBehaviour
         _uiCanvas.SetActive(false);
         _togglePauseText.text = Config.PAUSE_TEXT;
         _descriptionText.text = string.Empty;
+
+        if (ARContentManager.Instance.arContent == AR_CONTENT.ASSEMBLY)
+        {
+            _titleText.text = Config.ASSEMBLY_TEXT;
+        }
+        else
+        {
+            _titleText.text = Config.DIASSEMBLY_TEXT;
+        }
     }
 
-    public void InitializeUI(ACTION_TYPE actionType)
+    public void InitializeUI()
     {
         _togglePauseText.text = Config.PAUSE_TEXT;
-        _titleText.text = (actionType == ACTION_TYPE.ASSEMBLY) ? Config.ASSEMBLY_TEXT : Config.DIASSEMBLY_TEXT;
+        //_titleText.text = (actionType == ACTION_TYPE.ASSEMBLY) ? Config.ASSEMBLY_TEXT : Config.DIASSEMBLY_TEXT;
     }
 
     public void SetActiveCanvasUI(bool setActive)

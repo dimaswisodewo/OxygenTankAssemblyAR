@@ -23,6 +23,9 @@ public class CustomTrackableEventHandler : MonoBehaviour
     [SerializeField]
     private ARObject arObject;
 
+    [SerializeField]
+    private AR_CONTENT _arContent;
+
     public TrackingStatusFilter StatusFilter = TrackingStatusFilter.Tracked_ExtendedTracked_Limited;
     public UnityEvent OnTargetFound;
     public UnityEvent OnTargetLost;
@@ -36,6 +39,12 @@ public class CustomTrackableEventHandler : MonoBehaviour
 
     protected virtual void Start()
     {
+        if (_arContent != ARContentManager.Instance.arContent)
+        {
+            gameObject.SetActive(false);
+            this.enabled = false;
+        }
+
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 
         if (mTrackableBehaviour)
