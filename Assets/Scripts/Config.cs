@@ -8,6 +8,8 @@ public static class Config
 
     public const string RESUME_TEXT = "Resume";
     public const string PAUSE_TEXT = "Pause";
+    public const string SHOW_TEXT = "Show";
+    public const string HIDE_TEXT = "Hide";
     public const string ASSEMBLY_TEXT = "Installation";
     public const string DIASSEMBLY_TEXT = "Removal";
     public const string SAFETY_TEXT = "Safety Precaution";
@@ -17,6 +19,8 @@ public static class Config
 
     public const float DESCRIPTION_PANEL_TOP_POS = 0f;
     public const float DESCRIPTION_PANEL_BOT_POS = -485f;
+    public const float SIDE_BUTTONS_SHOWN_POS = 0f;
+    public const float SIDE_BUTTONS_HIDDEN_POS = -160f;
 
     public const float MIN_SCALE = 0.3f;
     public const float MAX_SCALE = 1.8f;

@@ -12,6 +12,9 @@ public class GameplayManager : MonoBehaviour
     [HideInInspector]
     public ARObject selectedARObject;
 
+    [HideInInspector]
+    public bool _isRotated;
+
     public delegate void AnimationHandler();
     public event AnimationHandler onPlayAnimation;
     public event AnimationHandler onPauseAnimation;
@@ -109,6 +112,25 @@ public class GameplayManager : MonoBehaviour
 
         _currentDescIndex -= 1;
         UIManager.Instance.SetDescriptionText(JsonSerializer.Instance.GetDescriptionData(selectedARObject.actionType, _currentDescIndex));
+    }
+
+    public void OnRotate45ButtonClick()
+    {
+        if (_isRotated)
+        {
+            selectedARObject.RotateParentX(-45f);
+            _isRotated = false;
+        }
+        else
+        {
+            selectedARObject.RotateParentX(45f);
+            _isRotated = true;
+        }
+    }
+
+    public void OnShowHideButtonClick()
+    {
+
     }
 }
 

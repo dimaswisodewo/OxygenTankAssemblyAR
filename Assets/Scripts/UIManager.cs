@@ -10,11 +10,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _uiCanvas;
     [SerializeField] private GameObject _instructionCanvas;
     [SerializeField] private RectTransform _descriptionPanel;
+    [SerializeField] private RectTransform _sideButtons;
     [SerializeField] private Text _descriptionText;
     [SerializeField] private Text _titleText;
     [SerializeField] private Text _togglePauseText;
+    [SerializeField] private Text _toggleShowHideText;
 
     private bool _isDescriptionPanelActive = false;
+    private bool _isSideButtonsShowing = true;
     
     public Text TogglePauseText
     { 
@@ -73,6 +76,22 @@ public class UIManager : MonoBehaviour
         {
             SetDescriptionPanelPosition(Config.DESCRIPTION_PANEL_TOP_POS);
             _isDescriptionPanelActive = true;
+        }
+    }
+
+    public void ToggleSideButtons()
+    {
+        if (_isSideButtonsShowing)
+        {
+            Tweening.MoveAnchorPosX(_sideButtons, Config.SIDE_BUTTONS_HIDDEN_POS);
+            _toggleShowHideText.text = Config.SHOW_TEXT;
+            _isSideButtonsShowing = false;
+        }
+        else
+        {
+            Tweening.MoveAnchorPosX(_sideButtons, Config.SIDE_BUTTONS_SHOWN_POS);
+            _toggleShowHideText.text = Config.HIDE_TEXT;
+            _isSideButtonsShowing = true;
         }
     }
 

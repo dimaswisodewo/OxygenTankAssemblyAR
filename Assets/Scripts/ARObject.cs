@@ -7,6 +7,9 @@ public class ARObject : MonoBehaviour
     public ACTION_TYPE actionType;
 
     [SerializeField]
+    private Transform parent;
+
+    [SerializeField]
     private Animator animator;
 
     private const string ANIMATION_STATE_ACTION = "Action";
@@ -36,5 +39,12 @@ public class ARObject : MonoBehaviour
     {
         transform.localEulerAngles = Vector3.zero;
         transform.localScale = Vector3.one;
+        parent.localEulerAngles = Vector3.zero;
+        GameplayManager.Instance._isRotated = false;
+    }
+
+    public void RotateParentX(float angle)
+    {
+        parent.Rotate(Vector3.right, angle);
     }
 }
