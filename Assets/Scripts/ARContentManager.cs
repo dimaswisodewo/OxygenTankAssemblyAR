@@ -11,6 +11,8 @@ public class ARContentManager : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 30;
+
         if (Instance == null)
         {
             Instance = this;
