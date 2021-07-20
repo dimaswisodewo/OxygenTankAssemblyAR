@@ -49,9 +49,9 @@ public class GameplayManager : MonoBehaviour
 
         UIManager.Instance.InitializeUI();
         UIManager.Instance.SetActiveCanvasUI(true);
-        UIManager.Instance.SetDescriptionText(JsonSerializer.Instance.GetDescriptionData(selectedARObject.actionType, 0));
 
         _currentDescIndex = 0;
+        UIManager.Instance.SetTextContent(selectedARObject.actionType, _currentDescIndex);
     }
 
     public void OnTrackingLost()
@@ -97,7 +97,7 @@ public class GameplayManager : MonoBehaviour
         }
 
         _currentDescIndex += 1;
-        UIManager.Instance.SetDescriptionText(JsonSerializer.Instance.GetDescriptionData(selectedARObject.actionType, _currentDescIndex));
+        UIManager.Instance.SetTextContent(selectedARObject.actionType, _currentDescIndex);
     }
 
     public void OnPrevDescButtonClick()
@@ -109,7 +109,7 @@ public class GameplayManager : MonoBehaviour
         }
 
         _currentDescIndex -= 1;
-        UIManager.Instance.SetDescriptionText(JsonSerializer.Instance.GetDescriptionData(selectedARObject.actionType, _currentDescIndex));
+        UIManager.Instance.SetTextContent(selectedARObject.actionType, _currentDescIndex);
     }
 
     public void OnRotate45ButtonClick()
@@ -124,11 +124,6 @@ public class GameplayManager : MonoBehaviour
             selectedARObject.RotateParentX(45f);
             _isRotated = true;
         }
-    }
-
-    public void OnShowHideButtonClick()
-    {
-
     }
 }
 

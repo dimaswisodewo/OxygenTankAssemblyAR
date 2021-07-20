@@ -9,9 +9,11 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject _uiCanvas;
     [SerializeField] private GameObject _instructionCanvas;
+    [SerializeField] private GameObject _warningPanel;
     [SerializeField] private RectTransform _descriptionPanel;
     [SerializeField] private RectTransform _sideButtons;
     [SerializeField] private Text _descriptionText;
+    [SerializeField] private Text _warningText;
     [SerializeField] private Text _titleText;
     [SerializeField] private Text _togglePauseText;
     [SerializeField] private Text _toggleShowHideText;
@@ -60,9 +62,32 @@ public class UIManager : MonoBehaviour
         _instructionCanvas.SetActive(setActive);
     }
 
-    public void SetDescriptionText(string newText)
+    private void SetDescriptionText(string newText)
     {
         _descriptionText.text = newText;
+    }
+
+    private void SetWarningText(string newText)
+    {
+        _warningText.text = newText;
+    }
+
+    public void SetTextContent(ACTION_TYPE actionType, int index)
+    {
+        SetDescriptionText(JsonSerializer.Instance.GetDescriptionData(actionType, index));
+
+        if (string.IsNullOrEmpty(JsonSerializer.Instance.GetWarningData(actionType, index)))
+        {
+            SetWarningText(string.Empty);
+            _warningPanel.SetActive(false);
+            Debug.Log("SetActive False " + _warningPanel.activeInHierarchy);
+        }
+        else
+        {
+            SetWarningText(JsonSerializer.Instance.GetWarningData(actionType, index));
+            _warningPanel.SetActive(true);
+            Debug.Log("SetActive True " + _warningPanel.activeInHierarchy);
+        }
     }
 
     public void ToggleDescriptionPanel()

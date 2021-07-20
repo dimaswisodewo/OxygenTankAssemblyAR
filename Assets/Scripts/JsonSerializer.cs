@@ -26,11 +26,28 @@ public class JsonSerializer : MonoBehaviour
         switch (actionType)
         {
             case ACTION_TYPE.ASSEMBLY:
-                outputString = data.assemble[index];
+                outputString = data.assemble[index].step;
                 break;
 
             case ACTION_TYPE.DIASSEMBLY:
-                outputString = data.diassemble[index];
+                outputString = data.diassemble[index].step;
+                break;
+        }
+
+        return outputString;
+    }
+
+    public string GetWarningData(ACTION_TYPE actionType, int index)
+    {
+        string outputString = string.Empty;
+        switch (actionType)
+        {
+            case ACTION_TYPE.ASSEMBLY:
+                outputString = data.assemble[index].warning;
+                break;
+
+            case ACTION_TYPE.DIASSEMBLY:
+                outputString = data.diassemble[index].warning;
                 break;
         }
 
@@ -83,7 +100,15 @@ public class JsonSerializer : MonoBehaviour
 [System.Serializable]
 public class Data
 {
-    public string[] assemble;
-    public string[] diassemble;
-    public string[] safety;
+    public Step[] assemble;
+    public Step[] diassemble;
+}
+
+[System.Serializable]
+public class Step
+{
+    public string step;
+    public string warning;
+    public string note;
+    public string caution;
 }

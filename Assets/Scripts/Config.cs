@@ -18,7 +18,9 @@ public static class Config
     public const string AR_SCENE = "ARScene";
 
     public const float DESCRIPTION_PANEL_TOP_POS = 0f;
-    public const float DESCRIPTION_PANEL_BOT_POS = -485f;
+    public const float DESCRIPTION_PANEL_BOT_POS = -785f;
+    public const float DESCRIPTION_PANEL_TOP_POS_2 = -300f;
+
     public const float SIDE_BUTTONS_SHOWN_POS = 0f;
     public const float SIDE_BUTTONS_HIDDEN_POS = -160f;
 

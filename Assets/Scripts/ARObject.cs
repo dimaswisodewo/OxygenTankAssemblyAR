@@ -25,6 +25,13 @@ public class ARObject : MonoBehaviour
         animator.Play(ANIMATION_STATE_ACTION, -1, 0f); // Reset animation state to first layer & start at 0 time
     }
 
+    //public void PlayAnimationOnFrame(int frameFrom, int frameTo)
+    //{
+    //    float startTime = frameFrom / 30f;
+    //    float endTime = frameTo / 30f;
+    //    animator.Play(ANIMATION_STATE_ACTION, -1, startTime);
+    //}
+
     public void PauseAnimation()
     {
         animator.speed = 0f;
