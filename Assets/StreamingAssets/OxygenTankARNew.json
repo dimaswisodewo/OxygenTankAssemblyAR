@@ -1,7 +1,7 @@
 {
   "assemble": [
     { 
-      "step" : "Before the Oxygen Cylinder install process, please open safety precautions first on the home page in the learning materials section",
+      "step" : "1. Before the Oxygen Cylinder install process, please open safety precautions first on the home page in the learning materials section",
       "warning" : null,
       "note"    : null,
       "caution" : null
@@ -14,7 +14,7 @@
     },
     { 
       "step" : "Do these steps to remove the cap from the valve of the oxygen cylinder, if it is necessary :\n\t(a) Make sure that the shutoff valve of the cylinder is fully closed.\n\t(b) Loosen the cap of the cylinder valve. Then let all the pressure go out of the valve.\n\t(c) Remove the cap.",
-      "warning" : "LOOSEN THE CONNECTION SLOWLY. THE REMAINING OXYGEN CAN RELEASE WITH A LARGE FORCE, AND CAUSE THE TEMPERATURE TO INCREASE. HEAT AND OXYGEN CAN CAUSE A FIRE. INJURIES TO PERSONNEL, AND DAMAGE TO EQUIPMENT CAN OCCUR.",
+      "warning" : "WARNING: LOOSEN THE CONNECTION SLOWLY. THE REMAINING OXYGEN CAN RELEASE WITH A LARGE FORCE, AND CAUSE THE TEMPERATURE TO INCREASE. HEAT AND OXYGEN CAN CAUSE A FIRE. INJURIES TO PERSONNEL, AND DAMAGE TO EQUIPMENT CAN OCCUR.",
       "note"    : null,
       "caution" : null
     },

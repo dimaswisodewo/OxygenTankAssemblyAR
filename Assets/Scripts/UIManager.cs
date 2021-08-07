@@ -15,17 +15,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text _descriptionText;
     [SerializeField] private Text _warningText;
     [SerializeField] private Text _titleText;
-    [SerializeField] private Text _togglePauseText;
     [SerializeField] private Text _toggleShowHideText;
+    
+    public Button replayButton;
 
     private bool _isDescriptionPanelActive = false;
     private bool _isSideButtonsShowing = true;
-    
-    public Text TogglePauseText
-    { 
-        set { _togglePauseText = value; } 
-        get { return _togglePauseText; }
-    }
 
     private void Awake()
     {
@@ -33,7 +28,6 @@ public class UIManager : MonoBehaviour
             Instance = this;
 
         _uiCanvas.SetActive(false);
-        _togglePauseText.text = Config.PAUSE_TEXT;
         _descriptionText.text = string.Empty;
 
         if (ARContentManager.Instance.arContent == AR_CONTENT.ASSEMBLY)
@@ -48,7 +42,6 @@ public class UIManager : MonoBehaviour
 
     public void InitializeUI()
     {
-        _togglePauseText.text = Config.PAUSE_TEXT;
         //_titleText.text = (actionType == ACTION_TYPE.ASSEMBLY) ? Config.ASSEMBLY_TEXT : Config.DIASSEMBLY_TEXT;
     }
 
