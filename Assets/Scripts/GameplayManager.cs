@@ -15,9 +15,9 @@ public class GameplayManager : MonoBehaviour
     [HideInInspector]
     public bool _isRotated;
 
-    public delegate void AnimationHandler();
-    public event AnimationHandler onPauseAnimation;
-    public event AnimationHandler onResumeAnimation;
+    //public delegate void AnimationHandler();
+    //public event AnimationHandler onPauseAnimation;
+    //public event AnimationHandler onResumeAnimation;
 
     public Coroutine animationCoroutine;
 

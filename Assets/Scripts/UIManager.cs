@@ -7,11 +7,18 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
+    [Header("Panel")]
     [SerializeField] private GameObject _uiCanvas;
     [SerializeField] private GameObject _instructionCanvas;
     [SerializeField] private GameObject _warningPanel;
     [SerializeField] private RectTransform _descriptionPanel;
     [SerializeField] private RectTransform _sideButtons;
+
+    [Header("Scroll Rect")]
+    [SerializeField] private ScrollRect _scrollRectContent;
+    [SerializeField] private ScrollRect _scrollRectWarning;
+
+    [Header("Text")]
     [SerializeField] private Text _descriptionText;
     [SerializeField] private Text _warningText;
     [SerializeField] private Text _titleText;
@@ -81,6 +88,9 @@ public class UIManager : MonoBehaviour
             _warningPanel.SetActive(true);
             Debug.Log("SetActive True " + _warningPanel.activeInHierarchy);
         }
+
+        _scrollRectContent.verticalNormalizedPosition = 1f;
+        _scrollRectWarning.verticalNormalizedPosition = 1f;
     }
 
     public void ToggleDescriptionPanel()
