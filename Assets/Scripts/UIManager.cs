@@ -24,7 +24,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Text _titleText;
     [SerializeField] private Text _toggleShowHideText;
     
+    [Header("Button")]
     public Button replayButton;
+    public Button previousButton;
+    public Button nextButton;
 
     private bool _isDescriptionPanelActive = false;
     private bool _isSideButtonsShowing = true;
@@ -102,8 +105,37 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            SetDescriptionPanelPosition(Config.DESCRIPTION_PANEL_TOP_POS);
+            float topPos = 0f;
+            if (string.IsNullOrEmpty(JsonSerializer.Instance.GetWarningData(GameplayManager.Instance.selectedARObject.actionType, GameplayManager.Instance.currentDescIndex)))
+            {
+                topPos = Config.DESCRIPTION_PANEL_TOP_POS_2;
+            }
+            else
+            {
+                topPos = Config.DESCRIPTION_PANEL_TOP_POS;
+            }
+
+            SetDescriptionPanelPosition(topPos);
             _isDescriptionPanelActive = true;
+        }
+    }
+
+    // Control description panel position based on the existence of warning data, whenever description text changed 
+    public void PositionCheckingDescriptionPanel()
+    {
+        if (_isDescriptionPanelActive)
+        {
+            float topPos = 0f;
+            if (string.IsNullOrEmpty(JsonSerializer.Instance.GetWarningData(GameplayManager.Instance.selectedARObject.actionType, GameplayManager.Instance.currentDescIndex)))
+            {
+                topPos = Config.DESCRIPTION_PANEL_TOP_POS_2;
+            }
+            else
+            {
+                topPos = Config.DESCRIPTION_PANEL_TOP_POS;
+            }
+
+            SetDescriptionPanelPosition(topPos);
         }
     }
 

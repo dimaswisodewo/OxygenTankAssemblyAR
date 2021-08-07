@@ -21,7 +21,10 @@ public class GameplayManager : MonoBehaviour
 
     public Coroutine animationCoroutine;
 
-    private int _currentDescIndex;
+    [HideInInspector]
+    public int currentDescIndex;
+
+    private int dataCount = -1;
 
     private void Awake()
     {
@@ -44,16 +47,22 @@ public class GameplayManager : MonoBehaviour
     public void OnTrackingFound()
     {
         //Initialize();
+        if (dataCount == -1)
+        {
+            dataCount = (selectedARObject.actionType == ACTION_TYPE.ASSEMBLY ? JsonSerializer.Instance.GetAssembleDataCount() : JsonSerializer.Instance.GetDiassembleDataCount());
+        }
+
         selectedARObject.gameObject.SetActive(true);
 
         UIManager.Instance.InitializeUI();
         UIManager.Instance.SetActiveCanvasUI(true);
 
-        _currentDescIndex = 0;
-        UIManager.Instance.SetTextContent(selectedARObject.actionType, _currentDescIndex);
+        currentDescIndex = 0;
+        UIManager.Instance.SetTextContent(selectedARObject.actionType, currentDescIndex);
+        UIManager.Instance.previousButton.interactable = false;
 
         selectedARObject.PauseAnimation();
-        selectedARObject.PlayAnimationOnStep(_currentDescIndex);
+        selectedARObject.PlayAnimationOnStep(currentDescIndex);
     }
 
     public void OnTrackingLost()
@@ -66,7 +75,7 @@ public class GameplayManager : MonoBehaviour
 
     public void OnPlayButtonClick()
     {
-        selectedARObject?.PlayAnimationOnStep(_currentDescIndex);
+        selectedARObject?.PlayAnimationOnStep(currentDescIndex);
     }
 
     //public void OnTogglePauseButtonClick()
@@ -88,40 +97,54 @@ public class GameplayManager : MonoBehaviour
         UIManager.Instance.ToggleDescriptionPanel();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            OnNextDescButtonClick();
-    }
-
     public void OnNextDescButtonClick()
     {
-        int dataCount = (selectedARObject.actionType == ACTION_TYPE.ASSEMBLY ? JsonSerializer.Instance.GetAssembleDataCount() : JsonSerializer.Instance.GetDiassembleDataCount());
-
-        if (_currentDescIndex + 1 >= dataCount)
-        {
-            Debug.Log("Reached the last item");
-            return;
-        }
-
-        _currentDescIndex += 1;
-        UIManager.Instance.SetTextContent(selectedARObject.actionType, _currentDescIndex);
-
-        selectedARObject.PlayAnimationOnStep(_currentDescIndex);
-    }
-
-    public void OnPrevDescButtonClick()
-    {
-        if (_currentDescIndex - 1 < 0)
+        if (currentDescIndex + 1 >= dataCount)
         {
             Debug.Log("Reached the first item");
             return;
         }
 
-        _currentDescIndex -= 1;
-        UIManager.Instance.SetTextContent(selectedARObject.actionType, _currentDescIndex);
+        currentDescIndex += 1;
+        UIManager.Instance.SetTextContent(selectedARObject.actionType, currentDescIndex);
+        UIManager.Instance.PositionCheckingDescriptionPanel();
 
-        selectedARObject.PlayAnimationOnStep(_currentDescIndex);
+        selectedARObject.PlayAnimationOnStep(currentDescIndex);
+
+        if (currentDescIndex + 1 >= dataCount)
+        {
+            UIManager.Instance.nextButton.interactable = false;
+        }
+        else
+        {
+            UIManager.Instance.previousButton.interactable = true;
+            UIManager.Instance.nextButton.interactable = true;
+        }
+    }
+
+    public void OnPrevDescButtonClick()
+    {
+        if (currentDescIndex - 1 < 0)
+        {
+            Debug.Log("Reached the last item");
+            return;
+        }
+
+        currentDescIndex -= 1;
+        UIManager.Instance.SetTextContent(selectedARObject.actionType, currentDescIndex);
+        UIManager.Instance.PositionCheckingDescriptionPanel();
+
+        selectedARObject.PlayAnimationOnStep(currentDescIndex);
+
+        if (currentDescIndex - 1 < 0)
+        {
+            UIManager.Instance.previousButton.interactable = false;
+        }
+        else
+        {
+            UIManager.Instance.previousButton.interactable = true;
+            UIManager.Instance.nextButton.interactable = true;
+        }
     }
 
     public void OnRotate45ButtonClick()
