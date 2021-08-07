@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScaleObject : MonoBehaviour
 {
     private Vector3 _initialScale;
+    private float _smoothing = 0.5f;
 
     private void OnEnable()
     {
@@ -22,7 +23,7 @@ public class ScaleObject : MonoBehaviour
     {
         float newScale = _initialScale.x * factor;
         newScale = Mathf.Clamp(newScale, Config.MIN_SCALE, Config.MAX_SCALE);
-        newScale = Mathf.Lerp(transform.localScale.x, newScale, Time.deltaTime);
+        newScale = Mathf.Lerp(transform.localScale.x, newScale, _smoothing);
         transform.localScale = new Vector3(newScale, newScale, newScale);
     }
 }

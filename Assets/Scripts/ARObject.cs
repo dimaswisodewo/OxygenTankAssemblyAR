@@ -89,8 +89,8 @@ public class ARObject : MonoBehaviour
         GameplayManager.Instance._isRotated = false;
     }
 
-    public void RotateParentX(float angle)
+    public void RotateARObject(float angle)
     {
-        parent.Rotate(Vector3.right, angle);
+        transform.Rotate(Vector3.right, angle);
     }
 }

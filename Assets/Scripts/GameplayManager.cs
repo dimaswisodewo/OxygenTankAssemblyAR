@@ -151,12 +151,12 @@ public class GameplayManager : MonoBehaviour
     {
         if (_isRotated)
         {
-            selectedARObject.RotateParentX(-45f);
+            selectedARObject.RotateARObject(-45f);
             _isRotated = false;
         }
         else
         {
-            selectedARObject.RotateParentX(45f);
+            selectedARObject.RotateARObject(45f);
             _isRotated = true;
         }
     }
