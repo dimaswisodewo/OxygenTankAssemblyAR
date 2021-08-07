@@ -14,5 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ARScene.unity
     guid: 13abb99469425834692cbb49b44c9cef
+  - enabled: 1
+    path: Assets/Scenes/LearningScene.unity
+    guid: 26cc7dbf902de8c44970b26fbd4a036b
+  - enabled: 1
+    path: Assets/Scenes/AboutScene.unity
+    guid: 162f0e0026f1db5479ad62c1025fe27a
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 80382fde412021b41b482cb8dccba2b9, type: 2}

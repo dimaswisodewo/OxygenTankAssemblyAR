@@ -16,6 +16,6 @@ public class RotateObject : MonoBehaviour
 
     public void OnRotate(float rotateValue)
     {
-        transform.Rotate(Vector3.up, rotateValue);
+        transform.Rotate(Vector3.up, rotateValue, Space.World);
     }
 }
