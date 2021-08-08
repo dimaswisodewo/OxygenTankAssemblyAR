@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ObjectManipulation : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class ObjectManipulation : MonoBehaviour
 
     private void Update()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && !EventSystem.current.IsPointerOverGameObject())
         {
             // Rotate
             if (Input.touchCount == 1 && _canBeScaled)

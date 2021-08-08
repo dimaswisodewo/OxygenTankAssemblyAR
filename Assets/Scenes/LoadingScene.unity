@@ -1333,7 +1333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3085245765262749739, guid: 52ae68d540607304a832723716141aed, type: 3}
       propertyPath: fileName
-      value: OxygenTankARNew.json
+      value: OxygenTankAR.json
       objectReference: {fileID: 0}
     - target: {fileID: 3085245765262749739, guid: 52ae68d540607304a832723716141aed, type: 3}
       propertyPath: onDataLoaded.m_PersistentCalls.m_Calls.Array.size

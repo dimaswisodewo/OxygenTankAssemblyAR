@@ -1,45 +1,96 @@
 {
-    "assemble" : [
-        "Step 1 Before the Oxygen Cylinder install process, please open the safety precautions first on the home page for maintenance safety.",
-        "Step 2 Oxygen Cylinders : \n\t -Make sure that the cylinder is in a serviceable condition. \n\t -Make sure that it has not been more than the time limit recommended by the manufacturer or regulatory requirements since the last hydrostatic test.\nNOTE: The last hydrostatic test date is stamped on the neck of the oxygen cylinder.",
-        "Step 3 Do these steps to remove the cap from the valve of the oxygen cylinder [3], if it is necessary :\n\t(a) Make sure that the shutoff valve [9] of the cylinder is fully closed.\n\t(b) Loosen the cap of the cylinder valve. Then let all the pressure go out of the valve.\n\t(c) Remove the cap.\n\nWarning : LOOSEN THE CONNECTION SLOWLY. THE REMAINING OXYGEN CAN RELEASE WITH A LARGE FORCE, AND CAUSE THE TEMPERATURE TO INCREASE. HEAT AND OXYGEN CAN CAUSE A FIRE. INJURIES TO PERSONNEL, AND DAMAGE TO EQUIPMENT CAN OCCUR.",
-        "Step 4 Examine the fittings of the valve assembly of the oxygen cylinder.\n\t(a) Make sure that the fittings are clean.\n\t(b) Clean the fittings if it is necessary. This is the task: Clean the Oxygen System Components, TASK 35-00-00-107-00.",
-        "Step 5 Install the new packing [8] on the union [7]. Then install the union on the valve of the oxygen cylinder [3]. Tighten the connection to 170 in-lb (19 Nm) - 200 in-lb (23 Nm).\n\tWarning : USE ONLY OXYGEN-CLEAN COMPONENTS IN THE OXYGEN SYSTEM. IF YOU DO NOT USE OXYGEN-CLEAN COMPONENTS, A FIRE OR AN EXPLOSION CAN OCCUR. THIS CAN CAUSE DAMAGE TO EQUIPMENT OR INJURIES TO PERSONS.",
-        "Step 6 Install the b-nut [6] and tighten to 190 in-lb (219 kg-cm).",
-        "Step 7 Remove the caps and plugs from the oxygen tubes and the coupling assembly",
-        "Step 8 Examine the fittings and threads on the oxygen tubes and ports.\n\t(a) Make sure that the fittings are clean.\n\t(b) Clean the fittings if it is necessary. This is the task:Clean the Oxygen System Components, TASK 35-00-00-107-001.",
-        "Step 9 Remove the caps and plugs from the oxygen tubes and the coupling assembly.\n\tPut the oxygen cylinder [3] in its installed position.\n\t\t(a)\tThen align the cylinder to the coupling assembly [2] and the overboard discharge tube [4].",
-        "Step 10 Connect the coupling nut [1] of the coupling assembly [2] to the oxygen cylinder. Then tighten the connection to 375 ±25 in-lb (42 ±3 Nm).",
-        "Step 11 Install the b-nut of the overboard discharge tube [4]. Then tighten the b-nut to 170 in-lb (19 Nm) - 200 in-lb (23 Nm).\n\tCaution : USE TWO WRENCHES TO DISCONNECT OR CONNECT TUBES. IF YOU DO NOT USE A WRENCH ON EACH SIDE OF THE CONNECTION, DAMAGE TO THE TUBES CAN OCCUR.",
-        "Step 12 Install the T-bolts of the cylinder clamps. Then tighten the T-bolts to 25 ±5 in-lb (3 ±1 Nm).\n\t(a) Make sure that one thread minimum of the T-bolt extends through the nut.\nNOTE: Make sure that the T-bolt holds the oxygen cylinder tightly to prevent all unwanted movements.",
-        "Step 13 To open the shutoff valves on the oxygen cylinders, do these steps.\n\t(a) Slowly open the shutoff valve (counter clockwise) until it is fully open.\n\t(b) Make sure that the shutoff valve is fully open. Then turn the valve clockwise one quarter turn (90 degrees).\n\t(c) Install an inspection lockwire to the shutoff valve [9] (PAGEBLOCK 20-10-44\/401). Use the lockwire, G01505 or the MS20995CY20 lockwire, G02479\n\tWarning : YOU MUST OPEN THE SHUTOFF VALVE SLOWLY, OR HIGH TEMPERATURES CAN OCCUR. THIS CAN START AN IGNITION WITH THE OXYGEN AND CAN CAUSE INJURY TO PERSONS AND DAMAGE TO THE EQUIPMENT.\n\tCaution : USE TWO WRENCHES TO DISCONNECT OR CONNECT TUBES. IF YOU DO NOT USE A WRENCH ON EACH SIDE OF THE CONNECTION, DAMAGE TO THE TUBES CAN OCCUR.",
-        "Step 14 Apply the leak detection compound, G50306 to the connections of the oxygen cylinder valve, an the coupling assembly [2].\\n\\t(a)\tLook for bubbles to find all the leaks. Repair the leaks, if it is necessary. Then do the leak check again.\\n\\t(b)\tRemove the leak detection compound, G50306 with a clean cotton wiper, G00034 immediately after the check.\\n\\t(c)\tMake sure that the fittings and connections are dry.",
-        "Step 15 Clean the leak test solution off with a cotton wiper, G00034 immediately after the leak test.\n\tMake sure that the system pressure is in the necessary range.\n\tIf oxygen cylinders have pressure caps attached to the cylinders by chains, use lockwire to decrease the caps movement."
+    "assemble": [
+      { 
+        "step" : "1. Before the Oxygen Cylinder install process, please open safety precautions first on the home page in the learning materials section.\n\n2. Oxygen Cylinders : \n\t\t- Make sure that the cylinder is in a serviceable condition.\n\t\t- Make sure that it has not been more than the time limit recommended by the manufacturer or regulatory requirements since the last hydrostatic test.\n\nNOTE: The last hydrostatic test date is stamped on the neck of the oxygen cylinder.",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
+      },
+      {
+         "step" : "3. Do these steps to remove the cap from the valve of the oxygen cylinder, if it is necessary :\n\t\t- Make sure that the shutoff valve of the cylinder is fully closed.\n\t\t- Loosen the cap of the cylinder valve. Then let all the pressure go out of the valve.\n\t\t- Remove the cap.\n\n4. Examine the fittings of the valve assembly of the oxygen cylinder.\n\t\t- Make sure that the fittings are clean.\n\t\t- Clean the fittings if it is necessary.\nThis is the task: Clean the Oxygen System Components, TASK 35-00-00-107-00.",
+        "warning" : "WARNING: LOOSEN THE CONNECTION SLOWLY. THE REMAINING OXYGEN CAN RELEASE WITH A LARGE FORCE, AND CAUSE THE TEMPERATURE TO INCREASE. HEAT AND OXYGEN CAN CAUSE A FIRE. INJURIES TO PERSONNEL, AND DAMAGE TO EQUIPMENT CAN OCCUR.",
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "5. Remove the caps and plugs from the oxygen tubes and the coupling assembly.\n\n6. Examine the fittings and threads on the oxygen tubes and ports.\n\t\t- Make sure that the fittings are clean.\n\t\t- Clean the fittings if it is necessary.\nThis is the task: Clean the Oxygen System Components, TASK 35-00-00-107-001.",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "7. Remove the caps and plugs from the oxygen tubes and the coupling assembly.\n\t\t- Put the oxygen cylinder [3] in its installed position.\n\t\t- Then align the cylinder to the coupling assembly [2] and the overboard discharge tube [4].\n\n8. Connect the coupling nut of the coupling assembly to the oxygen cylinder. Then tighten the connection to 375 ±25 in-lb (42 ±3 Nm).",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null 
+      },
+      { 
+        "step" : "9. Install the new packing on the union.\nThen install the union on the valve of the oxygen cylinder.\nTighten the connection to 170 in-lb (19 Nm) - 200 in-lb (23 Nm).\n\n10. Install the B-nut and tighten to 190 in-lb (219 kg-cm).",
+        "warning" : "WARNING: USE ONLY OXYGEN-CLEAN COMPONENTS IN THE OXYGEN SYSTEM. IF YOU DO NOT USE OXYGEN-CLEAN COMPONENTS, A FIRE OR AN EXPLOSION CAN OCCUR. THIS CAN CAUSE DAMAGE TO EQUIPMENT OR INJURIES TO PERSONS.\n\nCAUTION: USE TWO WRENCHES TO DISCONNECT OR CONNECT TUBES. IF YOU DO NOT USE A WRENCH ON EACH SIDE OF THE CONNECTION, DAMAGE TO THE TUBES CAN OCCUR.",
+        "note"    : null,
+        "caution" : null 
+      },
+      { 
+        "step" : "11. Install the b-nut of the overboard discharge tube. Then tighten the b-nut to 170 in-lb (19 Nm) - 200 in-lb (23 Nm).",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "12. Install the T-bolts of the cylinder clamps.\nThen tighten the T-bolts to 25 ±5 in-lb (3 ±1 Nm).\n\t\t- Make sure that one thread minimum of the T-bolt extends through the nut.\n\nNOTE: Make sure that the T-bolt holds the oxygen cylinder tightly to prevent all unwanted movements.",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "13. To open the shutoff valves on the oxygen cylinders, do these steps.\n\t\t- Slowly open the shutoff valve (counter clockwise) until it is fully open.\n\t\t- Make sure that the shutoff valve is fully open. Then turn the valve clockwise one quarter turn (90 degrees).\n\t\t- Install an inspection lockwire to the shutoff valve (PAGEBLOCK 20-10-44/401). Use the lockwire, G01505 or the MS20995CY20 lockwire, G02479.\n\n14. Apply the leak detection compound, G50306 to the connections of the oxygen cylinder valve, an the coupling assembly [2].\n\t\t- Look for bubbles to find all the leaks. Repair the leaks, if it is necessary. Then do the leak check again.\n\t\t- Remove the leak detection compound, G50306 with a clean cotton wiper, G00034 immediately after the check.\n\t\t- Make sure that the fittings and connections are dry.\n\n15. Clean the leak test solution off with a cotton wiper, G00034 immediately after the leak test.\n\t\t- Make sure that the system pressure is in the necessary range.\n\t\t- If oxygen cylinders have pressure caps attached to the cylinders by chains, use lockwire to decrease the caps movement.",
+        "warning" : "WARNING: YOU MUST OPEN THE SHUTOFF VALVE SLOWLY, OR HIGH TEMPERATURES CAN OCCUR. THIS CAN START AN IGNITION WITH THE OXYGEN AND CAN CAUSE INJURY TO PERSONS AND DAMAGE TO THE EQUIPMENT.\n\nCAUTION: USE TWO WRENCHES TO DISCONNECT OR CONNECT TUBES. IF YOU DO NOT USE A WRENCH ON EACH SIDE OF THE CONNECTION, DAMAGE TO THE TUBES CAN OCCUR.",
+        "note"    : null,
+        "caution" : null
+      }
     ],
-    "diassemble" : [
-        "Step 1 Before the Oxygen Cylinder Removal process, please open the safety precautions first on the home page for maintenance safety.",
-        "Step 2 Close the shutoff valve on the crew oxygen cylinder.\n\tCaution : DO NOT TIGHTEN THE SHUTOFF VALVE ON EACH OXYGEN CYLINDER MORE THAN 25 INCH-POUNDS (3 NM). TOO MUCH TORQUE CAN CAUSE DAMAGE TO THE SHUTOFF VALVE.",
-        "Step 3 Loosen the b-nut and disconnect the overboard discharge tube.",
-        "Step 4 Loosen the b-nut [6], remove the union [7] and the packing [8] from the valve assembly of the oxygen cylinder [3].\n\tRemove the packing from the union and then discard the packing.\n\tKeep the union [7]. You will use these parts to install the oxygen cylinder.",
-        "Step 5 Slowly loosen the coupling nut [1] of the cylinder coupling assembly [2].\n\tLet all the pressure go out of the oxygen tubes.Then disconnect the coupling nut.\nWarning : LOOSEN THE CONNECTION SLOWLY. THE REMAINING OXYGEN CAN RELEASE WITH A LARGE FORCE, AND CAUSE THE TEMPERATURE TO INCREASE. HEAT AND OXYGEN CAN CAUSE A FIRE. INJURIES TO PERSONNEL, AND DAMAGE TO EQUIPMENT CAN OCCUR.",
-        "Step 6 Disconnect the clamps, then remove the oxygen cylinder [3] assembly.",
-        "Step 7 Install the plugs and caps to all the open oxygen tubes and fittings.\n Install the cap on the valve assembly of the oxygen cylinder [3]. Then tighten the cap to 375 ±25 in-lb (42 ±3 Nm).\n\tWarning : USE ONLY OXYGEN-CLEAN COMPONENTS IN THE OXYGEN SYSTEM. IF YOU DO NOT USE OXYGEN-CLEAN COMPONENTS, A FIRE OR AN EXPLOSION CAN OCCUR. THIS CAN CAUSE DAMAGE TO EQUIPMENT OR INJURIES TO PERSONS.\nNOTE: Oxygen clean fittings come from a sealed container with a label for oxygen system installation. Make sure that you use only oxygen clean fittings. Some fittings used in the oxygen system are the same as fittings in other systems and are not oxygen clean. If it is necessary to clean parts, use the applicable oxygen procedures to clean the parts. This also applies to tube caps or plugs which must be as clean as the installation connections.",
-        "Step 8 End of task."
-    ],
-    "safety" : [
-        "Step 1 Warning : DO NOT WORK ON THE PRESSURIZED OXYGEN SYSTEM WHEN THERE IS OIL, GREASE, FLAMMABLE SOLVENTS, DUST, LINT, METAL PARTICLES, OR OTHER FLAMMABLE MATERIALS. THESE MATERIALS CAN CAUSE A FIRE OR EXPLOSION WHEN THEY TOUCH PRESSURIZED OXYGEN.\n\tDo not work on the pressurized oxygen near oil, grease, flammable solvents, dust, lint, metal fittings, or other flammable materials.",
-        "Step 2 Make sure the airplane is electrically grounded (PAGEBLOCK 20-40-11/201).",
-        "Step 3 Keep the oxygen away from all sources of ignition (hot exhaust, sparks, flame, smoking).",
-        "Step 4 Keep the oxygen away from flammable material (fuel, paint, thinners, and cleaning solvents).",
-        "Step 5 Make sure your hands, clothing, equipment, and tools are clean and free of petroleum materials.",
-        "Step 6 Put on lint-free gloves, G01306 during oxygen system maintenance.",
-        "Step 7 Use the approved leak detection compound, G50306 to do the test.",
-        "Step 8 Immediately after the test, rub off the leak detection compound, G50306 with a cotton cloth, G50316.",
-        "Step 9 Make sure there is a sufficient flow of air through the area when you do maintenance on the oxygen system.",
-        "Step 10 When you install a component in the oxygen system, make sure you remove all protective caps and plug, STD-157.\n\nWarning : USE ONLY CLEAN COMPONENTS THAT COME FROM A SEALED BAG. MAKE SURE THAT THE LABEL ON THE BAG IDENTIFIES THE COMPONENTS AS SUFFICIENTLY CLEAN FOR THE OXYGEN SYSTEM. CONTAMINATION ON COMPONENTS CAN CAUSE A FIRE OR AN EXPLOSION. THIS CAN CAUSE INJURIES TO PERSONNEL AND DAMAGE TO EQUIPMENT.\n\nWarning : DO NOT USE LUBRICANT OR GASKETS, UNLESS SPECIFICALLY IDENTIFIED IN THESE PROCEDURES, WHEN YOU CONNECT THE FITTINGS IN THE CREW OXYGEN SYSTEM. THE LUBRICANT OR GASKETS CAN CAUSE A FIRE OR EXPLOSION WHEN THEY ARE NEAR PRESSURIZED OXYGEN.",
-        "Step 11 Make sure the fittings are clean and free of contamination, thread particles and unwanted particles.\n\nWarning : USE ONLY CLEAN COMPONENTS THAT COME FROM A SEALED BAG. MAKE SURE THAT THE LABEL ON THE BAG IDENTIFIES THE COMPONENTS AS SUFFICIENTLY CLEAN FOR THE OXYGEN SYSTEM. CONTAMINATION ON COMPONENTS CAN CAUSE A FIRE OR AN EXPLOSION. THIS CAN CAUSE INJURIES TO PERSONNEL AND DAMAGE TO EQUIPMENT.\n\nNOTE: Oxygen clean fittings come from a sealed package labeled for oxygen system installation. Make sure that you use only oxygen clean fittings. Some fittings used in the oxygen system are the same as fittings in other systems and are not oxygen clean. If it is necessary to clean parts, use the applicable oxygen procedures to clean the parts. This also applies to tube caps or plugs which must be as clean as the installation connections.",
-        "Step 12 Do not align the components with the B-nut.\n\nNOTE: If the components are aligned with the B-nut, a leak can occur and cause a fire and an explosion.\n\n Do not tighten the fittings with the oxygen system pressurized.",
-        "Step 13 To open all the oxygen valves slowly, do these steps:\n\t Warning : OPEN THE SHUTOFF VALVE ON THE OXYGEN CYLINDERS SLOWLY. IF YOU DO NOT OPEN THE SHUTOFF VALVE SLOWLY, HIGH TEMPERATURES CAN OCCUR. HIGH TEMPERATURES CAN CAUSE A FIRE OR EXPLOSION OF THE OXYGEN.\nNOTE: This will prevent a sudden increase in pressure. This will decrease the possibility of a fire because of an increase in temperature. Make sure that the valves are also opened fully.\n\n(a) Supply electrical power (PAGEBLOCK 24-22-00/201).\n(b) Make sure this circuit breaker is closed:\n\t 1) P18 Panel\n\ta) OXYGEN SYSTEM IND\n\n  CAUTION :DO NOT USE MORE THAN 25 POUND-INCHES OF TORQUE. IF YOU USE MORE TORQUE, DAMAGE TO THE VALVE COULD OCCUR.\n\n(c) Slowly open the oxygen cylinder valve to the fully open position with your hand.\n\tNOTE: Do not use more than 25 pound-inches of torque (finger-tight).\n(d) Close the valve one quarter of a turn.\n(e) Install an inspection wire to keep the valve in this position.\n\tNOTE: Use MS20995CY20 lockwire, G02479.",
-        "Step 14 When you close the oxygen cylinder shutoff valves, also obey this precaution:\n\tCAUTION : DO NOT USE MORE THAN 25 POUND-INCHES OF TORQUE. IF YOU USE MORE TORQUE, DAMAGE TO THE VALVE CAN OCCUR.\n(a) Close the oxygen cylinder valve slowly with your hand (finger-tight).\n\tNOTE: The maximum torque is 25 pound-inches."
+    "diassemble": [
+      { 
+        "step" : "1. Before the Oxygen Cylinder Removal process, please open the safety precautions first on the home page for maintenance safety.",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "2. Close the shutoff valve on the crew oxygen cylinder.",
+        "warning" : null,
+        "note"    : null,
+        "caution" : "DO NOT TIGHTEN THE SHUTOFF VALVE ON EACH OXYGEN CYLINDER MORE THAN 25 INCH-POUNDS (3 NM). TOO MUCH TORQUE CAN CAUSE DAMAGE TO THE SHUTOFF VALVE."
+      },
+      { 
+        "step" : "3. Loosen the B-nut and disconnect the overboard discharge tube.",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "4. Loosen the B-nut, remove the union & packing from the valve assembly of the oxygen cylinder.\n\t\tRemove the packing from the union and then discard the packing.\n\t\tKeep the union. You will use these parts to install the oxygen cylinder.",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "5. Slowly loosen the coupling nut of the cylinder coupling assembly.\n\t\tLet all the pressure go out of the oxygen tubes.Then disconnect the coupling nut.",
+        "warning" : "WARNING: LOOSEN THE CONNECTION SLOWLY. THE REMAINING OXYGEN CAN RELEASE WITH A LARGE FORCE, AND CAUSE THE TEMPERATURE TO INCREASE. HEAT AND OXYGEN CAN CAUSE A FIRE. INJURIES TO PERSONNEL, AND DAMAGE TO EQUIPMENT CAN OCCUR.",
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "6. Disconnect the clamps, then remove the oxygen cylinder assembly.",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
+      },
+      { 
+        "step" : "7. Install the plugs and caps to all the open oxygen tubes and fittings.\n\t\tInstall the cap on the valve assembly of the oxygen cylinder. Then tighten the cap to 375 ±25 in-lb (42 ±3 Nm).\n\nNOTE: Oxygen clean fittings come from a sealed container with a label for oxygen system installation. Make sure that you use only oxygen clean fittings. Some fittings used in the oxygen system are the same as fittings in other systems and are not oxygen clean. If it is necessary to clean parts, use the applicable oxygen procedures to clean the parts. This also applies to tube caps or plugs which must be as clean as the installation connections.",
+        "warning" : "WARNING: USE ONLY OXYGEN-CLEAN COMPONENTS IN THE OXYGEN SYSTEM. IF YOU DO NOT USE OXYGEN-CLEAN COMPONENTS, A FIRE OR AN EXPLOSION CAN OCCUR. THIS CAN CAUSE DAMAGE TO EQUIPMENT OR INJURIES TO PERSONS.",
+        "note"    : null,
+        "caution" : null
+      }
     ]
-}
+  }

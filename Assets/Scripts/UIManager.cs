@@ -7,17 +7,27 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
+    [Header("Panel")]
     [SerializeField] private GameObject _uiCanvas;
     [SerializeField] private GameObject _instructionCanvas;
     [SerializeField] private GameObject _warningPanel;
     [SerializeField] private RectTransform _descriptionPanel;
     [SerializeField] private RectTransform _sideButtons;
+
+    [Header("Scroll Rect")]
+    [SerializeField] private ScrollRect _scrollRectContent;
+    [SerializeField] private ScrollRect _scrollRectWarning;
+
+    [Header("Text")]
     [SerializeField] private Text _descriptionText;
     [SerializeField] private Text _warningText;
     [SerializeField] private Text _titleText;
     [SerializeField] private Text _toggleShowHideText;
     
+    [Header("Button")]
     public Button replayButton;
+    public Button previousButton;
+    public Button nextButton;
 
     private bool _isDescriptionPanelActive = false;
     private bool _isSideButtonsShowing = true;
@@ -81,6 +91,9 @@ public class UIManager : MonoBehaviour
             _warningPanel.SetActive(true);
             Debug.Log("SetActive True " + _warningPanel.activeInHierarchy);
         }
+
+        _scrollRectContent.verticalNormalizedPosition = 1f;
+        _scrollRectWarning.verticalNormalizedPosition = 1f;
     }
 
     public void ToggleDescriptionPanel()
@@ -92,8 +105,37 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            SetDescriptionPanelPosition(Config.DESCRIPTION_PANEL_TOP_POS);
+            float topPos = 0f;
+            if (string.IsNullOrEmpty(JsonSerializer.Instance.GetWarningData(GameplayManager.Instance.selectedARObject.actionType, GameplayManager.Instance.currentDescIndex)))
+            {
+                topPos = Config.DESCRIPTION_PANEL_TOP_POS_2;
+            }
+            else
+            {
+                topPos = Config.DESCRIPTION_PANEL_TOP_POS;
+            }
+
+            SetDescriptionPanelPosition(topPos);
             _isDescriptionPanelActive = true;
+        }
+    }
+
+    // Control description panel position based on the existence of warning data, whenever description text changed 
+    public void PositionCheckingDescriptionPanel()
+    {
+        if (_isDescriptionPanelActive)
+        {
+            float topPos = 0f;
+            if (string.IsNullOrEmpty(JsonSerializer.Instance.GetWarningData(GameplayManager.Instance.selectedARObject.actionType, GameplayManager.Instance.currentDescIndex)))
+            {
+                topPos = Config.DESCRIPTION_PANEL_TOP_POS_2;
+            }
+            else
+            {
+                topPos = Config.DESCRIPTION_PANEL_TOP_POS;
+            }
+
+            SetDescriptionPanelPosition(topPos);
         }
     }
 

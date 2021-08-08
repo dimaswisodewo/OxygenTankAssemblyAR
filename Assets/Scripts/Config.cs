@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Config
 {
-    public static string APP_VERSION = "v.1.0.1.I.14";
+    public static string APP_VERSION = "v.1.0.1.I.16";
 
     public const string RESUME_TEXT = "Resume";
     public const string PAUSE_TEXT = "Pause";
@@ -24,8 +24,8 @@ public static class Config
     public const float DESCRIPTION_PANEL_BOT_POS = -785f;
     public const float DESCRIPTION_PANEL_TOP_POS_2 = -300f;
 
-    public const float SIDE_BUTTONS_SHOWN_POS = 0f;
-    public const float SIDE_BUTTONS_HIDDEN_POS = -160f;
+    public const float SIDE_BUTTONS_SHOWN_POS = -10f;
+    public const float SIDE_BUTTONS_HIDDEN_POS = 160f;
 
     public const float MIN_SCALE = 0.3f;
     public const float MAX_SCALE = 1.8f;
