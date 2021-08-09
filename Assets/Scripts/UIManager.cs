@@ -52,6 +52,9 @@ public class UIManager : MonoBehaviour
 
     public void InitializeUI()
     {
+        previousButton.interactable = true;
+        nextButton.interactable = true;
+
         //_titleText.text = (actionType == ACTION_TYPE.ASSEMBLY) ? Config.ASSEMBLY_TEXT : Config.DIASSEMBLY_TEXT;
     }
 

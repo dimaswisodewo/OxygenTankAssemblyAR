@@ -47,6 +47,12 @@
         "warning" : "WARNING: YOU MUST OPEN THE SHUTOFF VALVE SLOWLY, OR HIGH TEMPERATURES CAN OCCUR. THIS CAN START AN IGNITION WITH THE OXYGEN AND CAN CAUSE INJURY TO PERSONS AND DAMAGE TO THE EQUIPMENT.\n\nCAUTION: USE TWO WRENCHES TO DISCONNECT OR CONNECT TUBES. IF YOU DO NOT USE A WRENCH ON EACH SIDE OF THE CONNECTION, DAMAGE TO THE TUBES CAN OCCUR.",
         "note"    : null,
         "caution" : null
+      },
+      { 
+        "step" : "16. Do the leak detection procedure : \n Use an approved leak detection compound, G50306 to find small leaks :\n\t 1) Apply the leak detection compound on the connections that you think are a source of leaks.\n\t 2) Examine all the connections for bubbles: \n\t If there are leaks in the connections, make sure you used the correct torque values to tighten the fittings.\n\tThen if the leaks continue at the correct torque value, disassemble and examine the connection (Replace all bad parts). ",
+        "warning" : null,
+        "note"    : null,
+        "caution" : null
       }
     ],
     "diassemble": [
@@ -87,7 +93,7 @@
         "caution" : null
       },
       { 
-        "step" : "7. Install the plugs and caps to all the open oxygen tubes and fittings.\n\t\tInstall the cap on the valve assembly of the oxygen cylinder. Then tighten the cap to 375 ±25 in-lb (42 ±3 Nm).\n\nNOTE: Oxygen clean fittings come from a sealed container with a label for oxygen system installation. Make sure that you use only oxygen clean fittings. Some fittings used in the oxygen system are the same as fittings in other systems and are not oxygen clean. If it is necessary to clean parts, use the applicable oxygen procedures to clean the parts. This also applies to tube caps or plugs which must be as clean as the installation connections.",
+        "step" : "7. Install the plugs and caps to all the open oxygen tubes and fittings.\n\t\tInstall the cap on the valve assembly of the oxygen cylinder. Then tighten the cap to 375 ±25 in-lb (42 ±3 Nm).\n\nNOTE: Oxygen clean fittings come from a sealed container with a label for oxygen system installation. Make sure that you use only oxygen clean fittings. Some fittings used in the oxygen system are the same as fittings in other systems and are not oxygen clean. If it is necessary to clean parts, use the applicable oxygen procedures to clean the parts. This also applies to tube caps or plugs which must be as clean as the installation connections.\nNOTE: Oxygen clean fittings come from a sealed container with a label for oxygen system installation. Make sure that you use only oxygen clean fittings. Some fittings used in the oxygen system are the same as fittings in other systems and are not oxygen clean. If it is necessary to clean parts, use the applicable oxygen procedures to clean the parts. This also applies to tube caps or plugs which must be as clean as the installation connections.",
         "warning" : "WARNING: USE ONLY OXYGEN-CLEAN COMPONENTS IN THE OXYGEN SYSTEM. IF YOU DO NOT USE OXYGEN-CLEAN COMPONENTS, A FIRE OR AN EXPLOSION CAN OCCUR. THIS CAN CAUSE DAMAGE TO EQUIPMENT OR INJURIES TO PERSONS.",
         "note"    : null,
         "caution" : null
