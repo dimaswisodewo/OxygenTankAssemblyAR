@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Config
 {
-    public static string APP_VERSION = "v.1.0.1.I.16";
+    public static string APP_VERSION = "v.1.0.1.I.17";
 
     public const string RESUME_TEXT = "Resume";
     public const string PAUSE_TEXT = "Pause";
@@ -31,7 +31,7 @@ public static class Config
     public const float MAX_SCALE = 1.8f;
 
     public const float DIASSEMBLY_FRAME_COUNT = 1220f;
-    public const float ASSEMBLY_FRAME_COUNT = 1750f;
+    public const float ASSEMBLY_FRAME_COUNT = 1962f;
 
     public static float[][] DIASSEMBLY_ANIMATION_STEP = new float[][]
     {
@@ -53,6 +53,7 @@ public static class Config
         new float[] { 750f, 975f },
         new float[] { 975f, 1150f },
         new float[] { 1150f, 1470f },
-        new float[] { 1470f, 1750f }
+        new float[] { 1470f, 1750f },
+        new float[] { 1782f, 1962f }
     };
 }
