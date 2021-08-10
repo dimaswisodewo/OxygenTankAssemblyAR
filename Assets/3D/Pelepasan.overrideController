@@ -9,5 +9,5 @@ AnimatorOverrideController:
   m_Name: Pelepasan
   m_Controller: {fileID: 9100000, guid: 933292c8e965e6c409166ff3347e69bd, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 1827226128182048838, guid: 4fb7ad7c05f58cc40ae79998fc10b83d, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 26709c331056ef44e98c1ebedd5ab112, type: 2}
     m_OverrideClip: {fileID: 1827226128182048838, guid: 172adf0edc986b84e8c7f42f18ca1e6b, type: 3}

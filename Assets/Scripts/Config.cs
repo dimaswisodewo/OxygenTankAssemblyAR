@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Config
 {
-    public static string APP_VERSION = "v.1.0.1.I.17";
+    public static string APP_VERSION = "v.1.0.1.III.19";
 
     public const string RESUME_TEXT = "Resume";
     public const string PAUSE_TEXT = "Pause";
