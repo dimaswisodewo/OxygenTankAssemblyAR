@@ -109,6 +109,4 @@ public class Step
 {
     public string step;
     public string warning;
-    public string note;
-    public string caution;
 }
