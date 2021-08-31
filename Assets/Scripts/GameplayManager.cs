@@ -9,6 +9,9 @@ public class GameplayManager : MonoBehaviour
 
     public int activeMarkerCount = 0;
 
+    [SerializeField]
+    private SoundManager _soundManager;
+
     [HideInInspector]
     public ARObject selectedARObject;
 
@@ -60,6 +63,7 @@ public class GameplayManager : MonoBehaviour
         currentDescIndex = 0;
         UIManager.Instance.SetTextContent(selectedARObject.actionType, currentDescIndex);
         UIManager.Instance.previousButton.interactable = false;
+        _soundManager.PlayVoiceOver(selectedARObject.actionType, currentDescIndex);
 
         selectedARObject.PauseAnimation();
         selectedARObject.PlayAnimationOnStep(currentDescIndex);
@@ -69,6 +73,7 @@ public class GameplayManager : MonoBehaviour
     {
         selectedARObject?.gameObject.SetActive(false);
         UIManager.Instance.SetActiveCanvasUI(false);
+        _soundManager.source.Stop();
 
         //Deinitialize();
     }
@@ -108,6 +113,7 @@ public class GameplayManager : MonoBehaviour
         currentDescIndex += 1;
         UIManager.Instance.SetTextContent(selectedARObject.actionType, currentDescIndex);
         UIManager.Instance.PositionCheckingDescriptionPanel();
+        _soundManager.PlayVoiceOver(selectedARObject.actionType, currentDescIndex);
 
         selectedARObject.PlayAnimationOnStep(currentDescIndex);
 
@@ -133,6 +139,7 @@ public class GameplayManager : MonoBehaviour
         currentDescIndex -= 1;
         UIManager.Instance.SetTextContent(selectedARObject.actionType, currentDescIndex);
         UIManager.Instance.PositionCheckingDescriptionPanel();
+        _soundManager.PlayVoiceOver(selectedARObject.actionType, currentDescIndex);
 
         selectedARObject.PlayAnimationOnStep(currentDescIndex);
 
